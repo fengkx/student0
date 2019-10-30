@@ -8,6 +8,7 @@ char is_visible_char(char letter) {
 }
 
 size_t snscan_word(FILE*file, char **output_buffer) {
+    // read word
     size_t max_size = 10;
     char *buf = malloc(sizeof(*buf) * max_size);
     char letter = 0;
@@ -32,7 +33,7 @@ size_t snscan_word(FILE*file, char **output_buffer) {
     return i;
 }
 
-void read_strings(char ***arr_ptr, size_t *len) {
+void read_strings(char ***arr_ptr /* ptr of string array */, size_t *len) {
     size_t i;
     size_t max_size = 10;
     char **arr = malloc(max_size * sizeof(*arr));
